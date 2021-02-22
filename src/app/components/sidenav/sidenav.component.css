@@ -1,0 +1,272 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mat-drawer-container {
+    background-color: #e8e8e8 !important;
+}
+
+.app-container {
+    margin: 30px;
+    position: relative;
+    top: -115px;
+}
+
+mat-sidenav {
+    width: 240px;
+    border: 1px solid #d8d8d8;
+}
+
+mat-sidenav-content {
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mat-menu-item {
+    font-size: 15px;
+}
+
+.mat-list-item {
+    min-height: 50px;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 15px 10px;
+    max-width: 220px;
+}
+
+.mat-nav-list .mat-list-item .mat-list-item-content {
+    padding: 0 24px !important;
+}
+
+.mat-nav-list .mat-list-item .mat-icon {
+    margin-right: 15px;
+    color: #1a1a1a;
+}
+
+.mat-nav-list .mat-list-item.active,
+.mat-menu-item.active {
+    background-color: #5c77ff;
+}
+
+.mat-nav-list .mat-list-item.active .mat-icon,
+.mat-menu-item.active .mat-icon {
+    font-weight: 700;
+    color: #FFF !important;
+}
+
+.mat-nav-list .mat-list-item.active span,
+.mat-menu-item.active span {
+    font-weight: 500;
+    color: #FFF;
+}
+
+.content-container {
+    padding: 15px 20px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex: 1 0 auto;
+    flex-basis: auto;
+}
+
+.mat-nav-list {
+    padding-top: 0;
+}
+
+h1.app-name {
+    margin-left: 8px;
+}
+
+h1.app-name > a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.sidenav-container {
+    flex: 1;
+}
+
+.toolbar-is-mobile .sidenav-container {
+    flex: 1 0 auto;
+}
+
+.toggle-sidenav-icon {
+    color: #FFF;
+}
+
+.flex-spacer {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.fill-height {
+    display: flex;
+    align-items: center;
+}
+
+.button-settings {
+    font-size: 1rem;
+    height: 100%;
+    color: white;
+    padding-right: 0;
+}
+
+.button-settings .mat-icon {
+    margin-top: -1px;
+    padding-right: 5px;
+    font-size: 1.6rem;
+}
+
+.toolbar {
+    padding: 0;
+    z-index: 2;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding-left: 25px;
+}
+
+.logo-rdits-container {
+    padding: 6px 0;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.logo-rdits {
+    max-height: 50px;
+    margin: 0 auto;
+}
+
+.admin-panel-text {
+    font-weight: 400;
+}
+
+.user-panel-button {
+    background-color: white;
+    color: #FFF;
+    margin: 0 15px;
+}
+
+.mat-card-avatar > img {
+    margin-top: -4px;
+}
+
+::ng-deep .user-info-menu {
+    margin-top: 12px;
+}
+
+::ng-deep .user-info-menu .mat-menu-content .mat-card {
+    padding: 18px;
+}
+
+::ng-deep .user-info-menu .mat-menu-content {
+    padding: 0;
+}
+
+::ng-deep .mat-card-content {
+    margin-bottom: 5px !important;
+}
+
+::ng-deep .mat-card-content .mat-list .mat-list-item .mat-list-item-content {
+    padding: 0 !important;
+}
+
+::ng-deep .mat-menu-content {
+    padding: 0 !important;
+    min-width: 215px;
+}
+
+
+.search-input {
+    border: solid 1px white;
+    border-radius: 32px;
+    padding: 6px 16px;
+    width: 100%;
+    color: white;
+    outline: 0;
+    background-color: transparent;
+    font-size: 16px;
+    margin: 0 20px;
+    line-height: 34px;
+}
+
+.search-input::placeholder{
+    color: white;
+}
+
+.spacer{
+    width:100px;
+}
+
+.admin-panel {
+    background-color: transparent;
+    color: white !important;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    outline: none;
+}
+.widget-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.widget-heading {
+    opacity: .8;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.widget-subheading {
+    opacity: .5;
+    color: #FFF;
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.mat-list-base .mat-list-item{
+    font-size: 14px;
+}
+
+.user-infos {
+    margin-left: 15px;
+}
+
+.toggle-notifications-icon {
+    color: white !important;
+}
+
+.notifications-button{
+    margin-right:5px;
+}

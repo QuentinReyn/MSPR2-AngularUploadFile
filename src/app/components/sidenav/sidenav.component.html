@@ -1,0 +1,134 @@
+<div class="container">
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                     [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" opened="true" class="mat-elevation-z6">
+            <mat-nav-list>
+                <a mat-list-item>
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div style="        height: 240px;
+        width: 100%;
+        background-image: linear-gradient(316deg, rgba(234, 234, 234, 0.02) 0%, rgba(234, 234, 234, 0.02) 16.667%,rgba(128, 128, 128, 0.02) 16.667%, rgba(128, 128, 128, 0.02) 33.334%,rgba(161, 161, 161, 0.02) 33.334%, rgba(161, 161, 161, 0.02) 50.001000000000005%,rgba(154, 154, 154, 0.02) 50.001%, rgba(154, 154, 154, 0.02) 66.668%,rgba(77, 77, 77, 0.02) 66.668%, rgba(77, 77, 77, 0.02) 83.33500000000001%,rgba(10, 10, 10, 0.02) 83.335%, rgba(10, 10, 10, 0.02) 100.002%),linear-gradient(90deg, rgba(39, 39, 39, 0.03) 0%, rgba(39, 39, 39, 0.03) 20%,rgba(232, 232, 232, 0.03) 20%, rgba(232, 232, 232, 0.03) 40%,rgba(33, 33, 33, 0.03) 40%, rgba(33, 33, 33, 0.03) 60%,rgba(84, 84, 84, 0.03) 60%, rgba(84, 84, 84, 0.03) 80%,rgba(112, 112, 112, 0.03) 80%, rgba(112, 112, 112, 0.03) 100%),linear-gradient(103deg, rgba(174, 174, 174, 0.03) 0%, rgba(174, 174, 174, 0.03) 12.5%,rgba(190, 190, 190, 0.03) 12.5%, rgba(190, 190, 190, 0.03) 25%,rgba(191, 191, 191, 0.03) 25%, rgba(191, 191, 191, 0.03) 37.5%,rgba(23, 23, 23, 0.03) 37.5%, rgba(23, 23, 23, 0.03) 50%,rgba(227, 227, 227, 0.03) 50%, rgba(227, 227, 227, 0.03) 62.5%,rgba(71, 71, 71, 0.03) 62.5%, rgba(71, 71, 71, 0.03) 75%,rgba(162, 162, 162, 0.03) 75%, rgba(162, 162, 162, 0.03) 87.5%,rgba(85, 85, 85, 0.03) 87.5%, rgba(85, 85, 85, 0.03) 100%),linear-gradient(355deg, rgba(38, 38, 38, 0.02) 0%, rgba(38, 38, 38, 0.02) 25%,rgba(106, 106, 106, 0.02) 25%, rgba(106, 106, 106, 0.02) 50%,rgba(28, 28, 28, 0.02) 50%, rgba(28, 28, 28, 0.02) 75%,rgba(66, 66, 66, 0.02) 75%, rgba(66, 66, 66, 0.02) 100%),linear-gradient(137deg, rgba(38, 38, 38, 0.03) 0%, rgba(38, 38, 38, 0.03) 25%,rgba(211, 211, 211, 0.03) 25%, rgba(211, 211, 211, 0.03) 50%,rgba(4, 4, 4, 0.03) 50%, rgba(4, 4, 4, 0.03) 75%,rgba(24, 24, 24, 0.03) 75%, rgba(24, 24, 24, 0.03) 100%),linear-gradient(51deg, rgba(253, 253, 253, 0.03) 0%, rgba(253, 253, 253, 0.03) 14.286%,rgba(103, 103, 103, 0.03) 14.286%, rgba(103, 103, 103, 0.03) 28.572%,rgba(46, 46, 46, 0.03) 28.572%, rgba(46, 46, 46, 0.03) 42.858%,rgba(68, 68, 68, 0.03) 42.858%, rgba(68, 68, 68, 0.03) 57.144%,rgba(116, 116, 116, 0.03) 57.144%, rgba(116, 116, 116, 0.03) 71.42999999999999%,rgba(248, 248, 248, 0.03) 71.43%, rgba(248, 248, 248, 0.03) 85.71600000000001%,rgba(174, 174, 174, 0.03) 85.716%, rgba(174, 174, 174, 0.03) 100.002%),linear-gradient(283deg, rgba(20, 20, 20, 0.01) 0%, rgba(20, 20, 20, 0.01) 14.286%,rgba(23, 23, 23, 0.01) 14.286%, rgba(23, 23, 23, 0.01) 28.572%,rgba(19, 19, 19, 0.01) 28.572%, rgba(19, 19, 19, 0.01) 42.858%,rgba(134, 134, 134, 0.01) 42.858%, rgba(134, 134, 134, 0.01) 57.144%,rgba(4, 4, 4, 0.01) 57.144%, rgba(4, 4, 4, 0.01) 71.42999999999999%,rgba(254, 254, 254, 0.01) 71.43%, rgba(254, 254, 254, 0.01) 85.71600000000001%,rgba(87, 87, 87, 0.01) 85.716%, rgba(87, 87, 87, 0.01) 100.002%),linear-gradient(75deg, rgb(92,119,255),rgb(32,48,195));
+">
+                <mat-toolbar class="toolbar mat-elevation-z6">
+                    <button mat-icon-button (click)="snav.toggle()">
+                        <mat-icon class="toggle-sidenav-icon">
+                            {{ (snav.opened) ? 'lock_open' : 'lock' }}
+                        </mat-icon>
+                    </button>
+                    <h1 class="app-name">
+                        <a routerLink="/">
+                            UploadSite
+                        </a>
+                    </h1>
+                    <input type="search" class="mat-elevation-z2 search-input" placeholder="Rechercher...">
+                    <div class="flex-spacer"></div>
+                    <div class="full-height admin-panel">
+                        <!--*ngIf="userInfo && userInfo.isApplicationAdmin"-->
+                        <button mat-button [matMenuTriggerFor]="adminPanel" class="button-settings">
+                            <mat-icon>settings</mat-icon>
+                            <span class="admin-panel-text">
+                                Panel d'administration
+                            </span>
+                            <mat-icon>arrow_drop_down</mat-icon>
+                        </button>
+                        <mat-menu #adminPanel="matMenu" yPosition="below" [overlapTrigger]="false">
+                            <!-- <a routerLink="/" routerLinkActive="active" mat-menu-item>
+                                <mat-icon>home</mat-icon>
+                                <span>Home</span>
+                            </a>
+                            <a routerLink="/assets/list" routerLinkActive="active" mat-menu-item>
+                                <mat-icon>calendar_today</mat-icon>
+                                <span>Liste des assets</span>
+                            </a>
+                            <a routerLink="/dashboard" routerLinkActive="active" mat-menu-item>
+                                <mat-icon>build</mat-icon>
+                                <span>Tableau de bord</span>
+                            </a> -->
+                        </mat-menu>
+                    </div>
+                    <div class="user-infos">
+                        <!--*ngIf="userInfo-->
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left">
+                                <div class="widget-heading">
+                                    John Doe
+                                </div>
+                                <div class="widget-subheading">
+                                    Administrateur
+                                </div>
+                            </div>
+                            <button mat-icon-button [matMenuTriggerFor]="menuUser">
+                                <mat-icon class="user-icon white">
+                                    person
+                                </mat-icon>
+                            </button>
+                        </div>
+
+                        <mat-menu #menuUser="matMenu" yPosition="below" [overlapTrigger]="false" class="user-info-menu">
+                            <mat-card>
+                                <mat-card-header>
+                                    <div mat-card-avatar class="example-header-image">
+                                        <img src="../../../assets/images/avatar.png" />
+                                    </div>
+                                    <!--<mat-card-title>{{ userInfo.displayName }}</mat-card-title>
+                        <mat-card-subtitle>{{ userInfo.isApplicationAdmin ? 'Manager' : 'User' }}</mat-card-subtitle>-->
+                                    <mat-card-title>John Doear</mat-card-title>
+                                    <mat-card-subtitle>
+                                        Administrateur
+                                    </mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-divider></mat-divider>
+                                <mat-card-content>
+                                    <mat-list>
+                                        <mat-list-item>
+                                            <mat-icon class="icon-margin-right">description</mat-icon>
+                                            <!--<span class="subtitle">{{ userInfo.employeeId }}</span>-->
+                                            s=
+                                            <span class="subtitle">
+                                                su
+                                                Test
+                                            </span>
+                                            su
+                                        </mat-list-item>
+
+                                        <mat-list-item>
+                                            <mat-icon class="icon-margin-right">mail</mat-icon>
+                                            <span class="subtitle">jonhdoe@gmail.com</span>
+                                        </mat-list-item>
+                                        <mat-list-item>
+                                            <mat-icon class="icon-margin-right">call</mat-icon>
+                                            <span class="subtitle">0604151345</span>
+                                        </mat-list-item>
+                                    </mat-list>
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-menu>
+                    </div>
+
+                    <button mat-icon-button (click)="toggleNotifications()" class="notifications-button">
+                        <mat-icon class="toggle-notifications-icon" matBadge="15" matBadgeColor="warn">
+                            notifications
+                        </mat-icon>
+                    </button>
+                </mat-toolbar>
+            </div>
+            <div class="content-container">
+                <mat-card class="mat-elevation-z4 app-container">
+                    <div class="my-3">
+                        <app-upload-form></app-upload-form>
+                      </div>
+                    
+                      <div class="my-2">
+                        <app-upload-list></app-upload-list>
+                      </div>
+                </mat-card>
+            </div>
+            <!--<app-footer></app-footer>-->
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

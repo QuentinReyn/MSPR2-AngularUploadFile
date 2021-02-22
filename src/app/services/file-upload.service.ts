@@ -24,6 +24,7 @@ private basePath = '/uploads';
         storageRef.getDownloadURL().subscribe(downloadURL => {
           fileUpload.url = downloadURL;
           fileUpload.name = fileUpload.file.name;
+          fileUpload.userID = 1;
           this.saveFileData(fileUpload);
         });
       })

@@ -1,11 +1,15 @@
-<div class="card">
-  <div class="card-header">List of Files</div>
-  <ul
+<mat-card>
+  <mat-card-header>
+    <mat-card-title><h3>Liste des fichiers</h3></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+  <mat-list
     class="list-group list-group-flush"
     *ngFor="let file of fileUploads"
   >
-    <li class="list-group-item">
+    <mat-list-item class="list-group-item">
       <app-upload-details [fileUpload]='file'></app-upload-details>
-    </li>
-  </ul>
-</div>
+    </mat-list-item>
+ </mat-list>
+</mat-card-content>
+</mat-card>
