@@ -16,6 +16,7 @@ private basePath = '/uploads';
 
   pushFileToStorage(fileUpload: FileUpload): Observable<number> {
     const filePath = `${this.basePath}/${fileUpload.file.name}`;
+    if(filePath.includes(".csv")){
     const storageRef = this.storage.ref(filePath);
     const uploadTask = this.storage.upload(filePath, fileUpload.file);
 
@@ -31,6 +32,7 @@ private basePath = '/uploads';
     ).subscribe();
 
     return uploadTask.percentageChanges();
+    }
   }
 
   private saveFileData(fileUpload: FileUpload): void {
