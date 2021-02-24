@@ -23,12 +23,17 @@ export class UploadFormComponent implements OnInit {
   upload(): void {
     const file = this.selectedFiles.item(0);
     this.selectedFiles = undefined;
-
+   
     this.currentFileUpload = new FileUpload(file);
     if (this.currentFileUpload.file.name.includes('.csv')) {
       this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(
         (percentage) => {
+          if(percentage){
           this.percentage = Math.round(percentage);
+          }
+          else{
+            this.percentage = 100;
+          }
         },
         (error) => {
           console.log(error);
