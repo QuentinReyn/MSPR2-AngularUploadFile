@@ -18,4 +18,11 @@ export class UploadDetailsComponent implements OnInit {
   deleteFileUpload(fileUpload): void {
     this.uploadService.deleteFile(fileUpload);
   }
+
+  export(){
+    this.uploadService.download();
+  }
+  show(){
+    this.uploadService.getAll();
+  }
 }

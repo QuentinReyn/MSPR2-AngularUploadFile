@@ -44,6 +44,7 @@ export class UploadFormComponent implements OnInit {
        
         this.currentFileUpload = new FileUpload(file);
         if (this.currentFileUpload.file.name.includes('.csv')) {
+          this.uploadService.upload(file);
           this.uploadService.pushFileToStorage(this.currentFileUpload).subscribe(
             (percentage) => {
               if(percentage){
