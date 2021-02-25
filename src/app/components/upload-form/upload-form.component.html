@@ -12,15 +12,18 @@ mat-button
   class="btn btn-success btn-sm"
   [disabled]="!selectedFiles"
   (click)="upload()"
+  #action
 >
   Upload
 </button>
+<div *ngIf="formatError" style="margin-top: 8px; color: red;">
+  <label>Incorrect file format</label>
+</div>
 
 <div *ngIf="currentFileUpload" class="progress mt-2">
   <div
     class="progress-bar progress-bar-info"
     role="progressbar"
-    attr.aria-valuenow="{{ percentage }}"
     aria-valuemin="0"
     aria-valuemax="100"
     [ngStyle]="{ width: percentage + '%' }"
